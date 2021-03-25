@@ -14,7 +14,7 @@ const User = ({user}) => {
                 <div className="text-success"><h5>Location: {user.location}</h5></div>
                 <div className="text-success"><h5>Hireable: {user.hireable ? "Yes" : "No"}</h5></div>
                 <div className="text-success"><h5>Followers: {user.followers}</h5></div>
-                <div><a href={user.html_url} className="text-warning font-weight-bold"><h5>Open in Github <FaArrowRight color="info" /> </h5></a></div>
+                <div><a href={user.html_url} className="text-warning font-weight-bold pb-5"><h5>Open in Github <FaArrowRight color="info" /> </h5></a></div>
             </CardBody>
         </Card>
     )
