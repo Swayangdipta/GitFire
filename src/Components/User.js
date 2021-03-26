@@ -6,7 +6,7 @@ import {FaArrowRight} from 'react-icons/fa'
 
 const User = ({user}) => {
     return (
-        <Card className="text-center mt-3 mb-4 card" >
+        <Card className="text-center mt-3 mb-4 cardu" >
             <CardImg top width="10%" src={user.avatar_url} />
             <CardBody >
                 <CardTitle tag="h3" className="text-primary">{user.name}</CardTitle>
