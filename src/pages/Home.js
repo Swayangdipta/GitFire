@@ -28,7 +28,8 @@ const Home = () =>{
 
     const fetchDetails = async () => {
         try {
-            const {data} = await Axios.get(`https://api.github.com/users/${query}`)
+          const username= query.split(" ").join("").toLowerCase()
+            const {data} = await Axios.get(`https://api.github.com/users/${username}`)
             setUser(data)
             console.log(user);
             console.log(data);
