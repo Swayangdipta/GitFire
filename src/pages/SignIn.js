@@ -7,6 +7,7 @@ import firebase from 'firebase/app'
 import  {UserContext} from '../Context/UserContext'
 import { Redirect } from 'react-router-dom'
 import Header from '../layouts/Header';
+import Footer from '../layouts/Footer'
 
 
 
@@ -27,6 +28,9 @@ const SignUp = () =>{
                 context.setUser({email: res.user.email, uid: res.user.uid})
                 localStorage.setItem("GitFireUser",res.user.email)
 				setIsLoaded(!isLoaded)
+				toast('Signed In.',{
+					type: "warning"
+				})
             }
         ).catch(err => {
             toast(err.message,{
@@ -49,7 +53,7 @@ const SignUp = () =>{
     return (
 		<>
 		<Header />
-		<Container className='text-center'>
+		<Container className='text-center body'>
 			<Row>
 				<Col lg={6} className='offset-lg-3 mt-5'>
 					<Card>
@@ -97,6 +101,7 @@ const SignUp = () =>{
 				</Col>
 			</Row>
 		</Container>
+		<Footer />
 		</>
 	);
 }

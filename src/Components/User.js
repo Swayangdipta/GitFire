@@ -1,15 +1,15 @@
 import React  from 'react'
-import {Card,CardBody} from 'reactstrap'
+import {Card,CardBody, CardImg, CardTitle} from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {FaArrowRight} from 'react-icons/fa'
 
 
 const User = ({user}) => {
     return (
-        <Card className="text-center mt-3 mb-4 " style={{width: "300px",height: "300px"}} >
-            <img src={user.avatar_url} className="img-thumbnail" />
+        <Card className="text-center mt-3 mb-4 card" >
+            <CardImg top width="10%" src={user.avatar_url} />
             <CardBody >
-                <div className="text-primary"><h3>{user.name}</h3></div>
+                <CardTitle tag="h3" className="text-primary">{user.name}</CardTitle>
                 <div className="text-success"><h5>{user.bio? "Bio: " :""}{user.bio}</h5></div>
                 <div className="text-success"><h5>Location: {user.location}</h5></div>
                 <div className="text-success"><h5>Hireable: {user.hireable ? "Yes" : "No"}</h5></div>

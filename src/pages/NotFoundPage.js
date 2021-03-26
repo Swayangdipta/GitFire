@@ -1,9 +1,14 @@
 import React from 'react'
+import { Container } from 'reactstrap'
+import Footer from '../layouts/Footer'
 
 
 const NotFoundPage = () =>{
     return(
-        <h1>404 Page Not Found</h1>
+        <Container className="body">
+            <h1>404 Page Not Found</h1>
+            <Footer />
+        </Container>
     )
 }
 

@@ -16,6 +16,8 @@ import Repos from '../Components/Repos'
 import {UserContext} from '../Context/UserContext'
 import {toast} from 'react-toastify'
 import { Redirect } from 'react-router-dom';
+import Footer from '../layouts/Footer';
+import '../App.css'
 
 
 const Home = () =>{
@@ -46,7 +48,7 @@ const Home = () =>{
         <div>
         <Header />
       
-        <Container>
+        <Container className="body">
           <Row className=" mt-3">
             <Col md="5">
               <InputGroup>
@@ -67,6 +69,7 @@ const Home = () =>{
             </Col>
           </Row>
         </Container>
+        <Footer />
         </div>
     )
 }
